@@ -4,7 +4,7 @@ Install Nvidia CUDA 11.2/11.3 with cuDNN and Nvidia Container Toolkit on Ubuntu 
 
 ## Requirements
 
-- Ubuntu 20.04/21.04 Instance (Tested on Ubuntu 20.4)
+- Ubuntu 20.04/21.04 Instance (Tested on Ubuntu 20.04)
 - [GNU Make](https://www.gnu.org/software/make/)
 - Downloaded [cuDNN Archive](https://developer.nvidia.com/rdp/cudnn-archive) for Linux
 - `sudo` or `root` privileges;
@@ -13,9 +13,11 @@ Install Nvidia CUDA 11.2/11.3 with cuDNN and Nvidia Container Toolkit on Ubuntu 
 
 Once the cuDNN Archive is downloaded from the [Official Nvidia Page](https://developer.nvidia.com/rdp/cudnn-archive), the installation procedure can be started.
 
-For CUDA 11.2: `cudnn-11.2-linux-x64-v8.1.1.33.tgz`
+For CUDA 11.2 - `cudnn-11.2-linux-x64-v8.1.1.33.tgz` is used in Makefile. 
 
-For CUDA 11.3: `cudnn-11.3-linux-x64-v8.2.0.53.tgz`
+For CUDA 11.3 - `cudnn-11.3-linux-x64-v8.2.0.53.tgz` respectively.
+
+Depending on the OS platform or cuDNN release you can download desired version and just specify It in your Makefile.
 
 **Install Nvidia CUDA 11.3 with cuDNN v8.2.0.53:**
 
