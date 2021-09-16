@@ -46,6 +46,7 @@ install-cuda-11-3:
 	echo 'export LD_LIBRARY_PATH=/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
 	echo 'export PATH=/usr/local/cuda-11.3/bin:$PATH' >> ~/.bashrc
 	echo 'export PATH=/usr/bin:$PATH' >> ~/.bashrc
+	echo 'export PATH=/usr/local/bin:$PATH' >> ~/.bashrc
 	source ~/.bashrc
 	sudo modprobe nvidia
 	sudo update-initramfs -u
@@ -86,14 +87,12 @@ verify-cuda-11-3-tf:
 	sudo apt-get install -y python3-venv
 	python3 -m venv venv
 	source venv/bin/activate && pip3 install tensorflow==2.5.1 && python3 -c 'import tensorflow as tf; tf.config.list_physical_devices("GPU")'
-	deactivate
 	rm -rf venv/
 	
 verify-cuda-11-2-tf:
 	sudo apt-get install -y python3-venv
 	python3 -m venv venv
 	source venv/bin/activate && pip3 install tensorflow==2.4.2 && python3 -c 'import tensorflow as tf; tf.config.list_physical_devices("GPU")'
-	deactivate
 	rm -rf venv/
 	
 purge-nvidia-cuda:
